@@ -24,13 +24,13 @@ Button.displayName = 'Button';
 const StyledButton = styled.button<{ variant: string }>`
   background-color: ${({ variant }) =>
     variant !== 'outline' ? `var(--colorsPrimary950)` : 'none'};
-  border-radius: var(--aldo2);
+  border-radius: var(--borderRadius1);
   font: var(--textBaseFontMedium);
   border: ${({ variant }) =>
     variant === 'outline' ? '1px solid var(--colorsPrimary950)' : 'none'};
   color: ${({ variant }) =>
-    variant !== 'outline' ? 'var(--colorsBaseWhite)' : 'var(--colorsPrimary950)'};
+    variant !== 'outline' ? 'var(--colorsBaseNeutral100)' : 'var(--colorsPrimary950)'};
   font: var(--textBaseFontMedium);
-  padding: 5px 10px;
+  padding: var(--space0) var(--space1);
   cursor: pointer;
 `;
