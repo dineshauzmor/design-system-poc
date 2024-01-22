@@ -6,10 +6,10 @@ export const Button = forwardRef(
   (
     {
       children,
-      variant = 'outline',
+      variant = 'normal',
       className,
       ...rest
-    }: { children: React.ReactNode; variant: string; className: string },
+    }: { children: React.ReactNode; variant?: string; className?: string },
     ref
   ) => (
     <StyledButton variant={variant} {...rest} ref={ref} className={clsx(className)}>
