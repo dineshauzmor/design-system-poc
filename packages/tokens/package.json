@@ -19,5 +19,6 @@
     "ramda": "^0.29.1",
     "style-dictionary": "^3.8.0",
     "token-transformer": "^0.0.33"
-  }
+  },
+  "gitHead": "7223b83cee22613e77f973c76cd6d4808d6b0d20"
 }
