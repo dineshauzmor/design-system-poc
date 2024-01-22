@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-webpack5';
 
 import { join, dirname } from 'path';
 
@@ -19,8 +19,12 @@ const config: StorybookConfig = {
     getAbsolutePath('@etchteam/storybook-addon-css-variables-theme')
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-vite'),
-    options: {}
+    name: getAbsolutePath('@storybook/react-webpack5'),
+    options: {
+      builder: {
+        useSWC: true
+      }
+    }
   },
   docs: {
     autodocs: 'tag'
