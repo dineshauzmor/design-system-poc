@@ -6,7 +6,7 @@ export const Button = forwardRef(
   (
     {
       children,
-      variant = 'normal',
+      variant = 'primary',
       className,
       ...rest
     }: { children: React.ReactNode; variant?: string; className?: string },
