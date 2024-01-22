@@ -5,7 +5,7 @@
     "packages/**"
   ],
   "scripts": {
-    "publish": "lerna publish",
+    "publish": "lerna ru build && lerna publish",
     "build": "lerna run build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
