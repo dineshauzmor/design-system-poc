@@ -30,8 +30,13 @@ WithoutLabel.decorators = [
 export const WithLabel: StoryFn<typeof Input> = () => {
   return (
     <>
-      <Input placeholder="Primary placeholder" label="Primary Label" />
-      <Input variant="underline" placeholder="Underline Placeholder" label="Underline Label" />
+      <Input placeholder="Primary placeholder" label="Primary Label" id="primary" />
+      <Input
+        variant="underline"
+        placeholder="Underline Placeholder"
+        label="Underline Label"
+        id="underline"
+      />
     </>
   );
 };

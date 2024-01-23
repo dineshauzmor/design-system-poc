@@ -10,19 +10,21 @@ export const Input = forwardRef(
       className,
       label,
       placeholder,
+      id,
       ...rest
     }: {
       variant?: string;
       className?: string;
       placeholder?: string;
       label?: string;
+      id?: string;
     },
     ref
   ) => (
     <InputWrapper>
-      {label ? <StyledLabel htmlFor="input-id">{label} </StyledLabel> : ''}
+      {label ? <StyledLabel htmlFor={id}>{label} </StyledLabel> : ''}
       <StyledInput
-        id="input-id"
+        id={id}
         placeholder={placeholder}
         variant={variant}
         {...rest}
