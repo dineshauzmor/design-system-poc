@@ -9,8 +9,8 @@ export default {
 export const WithoutLabel: StoryFn<typeof Input> = () => {
   return (
     <>
-      <Input placeholder="Custom Primary placeholder" />
-      <Input variant="underline" placeholder="Custom Underline Placeholder" />
+      <Input placeholder="Primary placeholder" />
+      <Input variant="underline" placeholder="Underline Placeholder" />
     </>
   );
 };
@@ -30,12 +30,8 @@ WithoutLabel.decorators = [
 export const WithLabel: StoryFn<typeof Input> = () => {
   return (
     <>
-      <Input placeholder="Custom Primary placeholder" label="Custom Primary Label" />
-      <Input
-        variant="underline"
-        placeholder="Custom Underline Placeholder"
-        label="Custom Underline Label"
-      />
+      <Input placeholder="Primary placeholder" label="Primary Label" />
+      <Input variant="underline" placeholder="Underline Placeholder" label="Underline Label" />
     </>
   );
 };

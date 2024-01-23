@@ -46,29 +46,32 @@ const StyledLabel = styled.label`
 `;
 
 const StyledInput = styled.input<{ variant: string }>`
-  border-radius: ${({ variant }) =>
-    variant === 'underline' ? 'var(--borderRadius2)' : 'var(--borderRadius1)'};
+  padding: var(--space2) var(--space3);
+  font-size: var(--fontSize2);
+  color: var(--colorsBaseNeutral300);
   &&:focus {
     outline: 0px;
     ${({ variant }) =>
       variant === 'underline'
         ? `
       border: 0px;
-      border-bottom: 2px solid var(--colorsPrimary950);
-      color: var(--colorsPrimary950);
+      border-bottom: 1px solid var(--colorsPrimary950);
+      color: var(--colorsBaseNeutral900);
       `
-        : `border: 2px solid var(--colorsPrimary950);
-      color: var(--colorsPrimary950);
+        : `border: 1px solid var(--colorsPrimary950);
+      color: var(--colorsBaseNeutral900);
       `};
   }
   ${({ variant }) =>
     variant === 'underline'
       ? `
-    border: 0px;
-      border-bottom: 1px solid var(--colorsBaseNeutral200)`
-      : 'border: 1px solid var(--colorsBaseNeutral300)'};
-  color: var(--colorsBaseNeutral900);
-  font: var(--textBaseFontMedium);
-  padding: var(--space0);
-  cursor: pointer;
+      border: 0px;
+      border-bottom: 1px solid var(--colorsBaseNeutral200);
+      border-radius: var(--borderRadius2);
+      padding: var(--space2) 0;
+    `
+      : `
+      border: 1px solid var(--colorsBaseNeutral200);
+      border-radius: var(--borderRadius0)
+      `};
 `;
