@@ -4,7 +4,6 @@ import { transformTokens } from 'token-transformer';
 import fs from 'fs';
 
 registerTransforms(StyleDictionary);
-
 // Function to read and parse JSON file
 const readJsonFile = (filePath) => {
   try {
