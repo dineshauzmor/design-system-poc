@@ -57,5 +57,6 @@ const StyledText = styled.span<{ variant: string; size: string; weight: string }
         ${variant === 'primary' && 'color : var(--colorsBaseNeutral900)'};
         ${variant === 'secondary' && 'color : var(--colorsBaseNeutral500)'};
         ${variant === 'brand' && 'color : var(--colorsPrimary950)'};
+        ${variant === 'light' && 'color : var(--colorsBaseNeutral100)'};
     `};
 `;
