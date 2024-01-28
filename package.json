@@ -46,6 +46,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@auzmor-test/design-tokens": "^0.1.3"
+    "@auzmor-test/design-tokens": "workspace:*"
   }
 }
