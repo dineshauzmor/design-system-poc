@@ -1,10 +1,10 @@
 import type { Preview } from '@storybook/react';
 import cssVariablesTheme from '@etchteam/storybook-addon-css-variables-theme';
-import '@auzmor-test/design-tokens/brand/learn/tokens.module.css';
+import '@auzmor-test/design-tokens/brand/learn/tokens.css';
 //@ts-ignore
-import learn from '!!style-loader?injectType=lazyStyleTag!css-loader!@auzmor-test/design-tokens/brand/learn/tokens.module.css';
+import learn from '!!style-loader?injectType=lazyStyleTag!css-loader!@auzmor-test/design-tokens/brand/learn/tokens.css';
 //@ts-ignore
-import office from '!!style-loader?injectType=lazyStyleTag!css-loader!@auzmor-test/design-tokens/brand/office/tokens.module.css';
+import office from '!!style-loader?injectType=lazyStyleTag!css-loader!@auzmor-test/design-tokens/brand/office/tokens.css';
 
 const preview: Preview = {
   decorators: [cssVariablesTheme],

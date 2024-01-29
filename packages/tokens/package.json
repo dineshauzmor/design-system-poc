@@ -2,7 +2,7 @@
   "name": "@auzmor-test/design-tokens",
   "version": "0.1.16",
   "description": "Tokens for Auzmor",
-  "main": "brand/learn/tokens.module.css",
+  "main": "brand/learn/tokens.css",
   "publishConfig": {
     "access": "public"
   },

@@ -51,7 +51,7 @@ brands.forEach((brand) => {
         buildPath: `./brand/${brand}/`,
         files: [
           {
-            destination: `tokens.module.css`,
+            destination: `tokens.css`,
             format: 'css/variables'
           }
         ]
