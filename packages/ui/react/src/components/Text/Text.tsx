@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ForwardedRef } from 'react';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 
@@ -20,7 +20,7 @@ export const Text = forwardRef(
       className?: string;
       as?: string;
     },
-    ref
+    ref: ForwardedRef<HTMLSpanElement>
   ) => (
     <StyledText
       as={as}

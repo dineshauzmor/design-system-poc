@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ForwardedRef } from 'react';
 import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
@@ -11,7 +11,7 @@ export const Button = forwardRef(
       className,
       ...rest
     }: { children: React.ReactNode; variant?: string; className?: string },
-    ref
+    ref: ForwardedRef<HTMLButtonElement>
   ) => (
     <StyledButton variant={variant} {...rest} ref={ref} className={clsx(className)}>
       {children}

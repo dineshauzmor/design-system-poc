@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ForwardedRef } from 'react';
 import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
@@ -19,7 +19,7 @@ export const Input = forwardRef(
       label?: string;
       id?: string;
     },
-    ref
+    ref: ForwardedRef<HTMLInputElement>
   ) => (
     <InputWrapper>
       {label ? <StyledLabel htmlFor={id}>{label} </StyledLabel> : ''}
