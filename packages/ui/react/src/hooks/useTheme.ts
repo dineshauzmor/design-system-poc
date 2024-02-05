@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 export default function useTheme({ primaryColor }: { primaryColor?: string }) {
-  const scaleSteps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+  const scaleSteps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
   function generatePalette(baseColor) {
     // Convert the base color to an RGB array
     const rgb = hexToRgb(baseColor);
