@@ -25,7 +25,6 @@ const brands = ['learn', 'office'];
 brands.forEach((brand) => {
   const setsToUse = [brand];
   const excludes = [];
-
   const transformerOptions = {
     expandTypography: false,
     expandShadow: false,
