@@ -1,6 +1,6 @@
 {
   "name": "@auzmor-test/design-tokens",
-  "version": "0.1.17",
+  "version": "0.1.24",
   "description": "Tokens for Auzmor",
   "main": "brand/learn/tokens.css",
   "publishConfig": {
