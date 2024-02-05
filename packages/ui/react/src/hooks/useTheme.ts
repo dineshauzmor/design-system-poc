@@ -46,7 +46,7 @@ export default function useTheme({ primaryColor }: { primaryColor?: string }) {
   });
   useEffect(() => {
     if (primaryColor && typeof document !== 'undefined') {
-      const arr = generatePalette(rootStyles.getPropertyValue('--colorsPrimary950'));
+      const arr = generatePalette(primaryColor);
 
       arr.map((val, ind) =>
         document.documentElement?.style.setProperty(`--colorsPrimary${scaleSteps[ind]}`, val)
