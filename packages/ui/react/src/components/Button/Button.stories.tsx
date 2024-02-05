@@ -1,12 +1,14 @@
 import React from 'react';
 import { Button } from './Button';
 import type { StoryFn } from '@storybook/react';
+import useTheme from '../../hooks/useTheme';
 
 export default {
   title: 'Design System/Button',
   component: Button
 };
 export const Variants: StoryFn<typeof Button> = () => {
+  useTheme({ primaryColor: 'blue' });
   return (
     <>
       <Button>Primary</Button>
