@@ -38,5 +38,6 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "styled-components": "^6.1.8",
     "typescript": "^5.3.3"
-  }
+  },
+  "gitHead": "f9f71a0a391611d35f6bb157a8d01607b40016e1"
 }
