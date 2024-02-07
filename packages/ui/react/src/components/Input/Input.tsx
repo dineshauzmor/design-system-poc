@@ -57,10 +57,10 @@ const StyledInput = styled.input<{ variant: string }>`
       variant === 'underline'
         ? `
       border: 0px;
-      border-bottom: 1px solid var(--colorsPrimary950);
+      border-bottom: 1px solid var(--colorsPrimary500);
       color: var(--colorsBaseNeutral900);
       `
-        : `border: 1px solid var(--colorsPrimary950);
+        : `border: 1px solid var(--colorsPrimary500);
       color: var(--colorsBaseNeutral900);
       `};
   }

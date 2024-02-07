@@ -1,18 +1,31 @@
 import { useEffect } from 'react';
 
 export default function useTheme({ primaryColor }: { primaryColor?: string }) {
-  const scaleSteps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
+  // Define the scale steps (Tailwind CSS scale from 50 to 950)
+  const lighterSteps = [50, 100, 200, 300, 400];
+  const darkerSteps = [600, 700, 800, 900, 950];
+  const scaleSteps = [...lighterSteps, 500, darkerSteps];
   function generatePalette(baseColor) {
     // Convert the base color to an RGB array
     const rgb = hexToRgb(baseColor);
 
-    // Define the scale steps (Tailwind CSS scale from 50 to 900)
+    // Assign the base color to 500
+    const baseColorHex = rgbToHex(rgb);
 
-    // Generate palette by adjusting the lightness based on the scale steps
-    const palette = scaleSteps.map((step) => {
+    // Generate lighter shades by adjusting the lightness based on the scale steps
+    const lighterShades = lighterSteps.map((step) => {
       const adjustedColor = adjustLightness(rgb, step);
       return rgbToHex(adjustedColor);
     });
+
+    // Generate darker shades by adjusting the lightness based on the scale steps
+    const darkerShades = darkerSteps.map((step) => {
+      const adjustedColor = adjustLightness(rgb, step);
+      return rgbToHex(adjustedColor);
+    });
+
+    // Combine the shades into a palette
+    const palette = [...lighterShades, baseColorHex, ...darkerShades];
 
     return palette;
   }
@@ -29,7 +42,7 @@ export default function useTheme({ primaryColor }: { primaryColor?: string }) {
   function adjustLightness(rgb, scaleStep) {
     // Adjust the lightness of the base color based on the scale step
     const [r, g, b] = rgb;
-    const lightness = scaleStep / 1000; // Tailwind CSS uses a scale from 50 to 900
+    const lightness = scaleStep / 1000; // Tailwind CSS uses a scale from 50 to 950
 
     return [Math.round(r * lightness), Math.round(g * lightness), Math.round(b * lightness)];
   }
@@ -41,8 +54,8 @@ export default function useTheme({ primaryColor }: { primaryColor?: string }) {
 
   const rootStyles = getComputedStyle(document.documentElement);
   console.log({
-    color: rootStyles.getPropertyValue('--colorsPrimary950'),
-    val: generatePalette(rootStyles.getPropertyValue('--colorsPrimary950'))
+    color: rootStyles.getPropertyValue('--colorsPrimary500'),
+    val: generatePalette(rootStyles.getPropertyValue('--colorsPrimary500'))
   });
   useEffect(() => {
     if (primaryColor && typeof document !== 'undefined') {
@@ -51,7 +64,7 @@ export default function useTheme({ primaryColor }: { primaryColor?: string }) {
       arr.map((val, ind) =>
         document.documentElement?.style.setProperty(`--colorsPrimary${scaleSteps[ind]}`, val)
       );
-      // document.documentElement?.style.setProperty('--colorsPrimary950', primaryColor);
+      // document.documentElement?.style.setProperty('--colorsPrimary500', primaryColor);
     }
   }, [primaryColor]);
 }
