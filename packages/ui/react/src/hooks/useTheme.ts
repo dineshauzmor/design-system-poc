@@ -4,7 +4,7 @@ export default function useTheme({ primaryColor }: { primaryColor?: string }) {
   // Define the scale steps (Tailwind CSS scale from 50 to 950)
   const lighterSteps = [50, 100, 200, 300, 400];
   const darkerSteps = [600, 700, 800, 900, 950];
-  const scaleSteps = [...lighterSteps, 500, darkerSteps];
+  const scaleSteps = [...lighterSteps, 500, ...darkerSteps];
   function generatePalette(baseColor) {
     // Convert the base color to an RGB array
     const rgb = hexToRgb(baseColor);
@@ -42,7 +42,7 @@ export default function useTheme({ primaryColor }: { primaryColor?: string }) {
   function adjustLightness(rgb, scaleStep) {
     // Adjust the lightness of the base color based on the scale step
     const [r, g, b] = rgb;
-    const lightness = scaleStep / 1000; // Tailwind CSS uses a scale from 50 to 950
+    const lightness = 1 - scaleStep / 1000; // Tailwind CSS uses a scale from 50 to 950
 
     return [Math.round(r * lightness), Math.round(g * lightness), Math.round(b * lightness)];
   }
